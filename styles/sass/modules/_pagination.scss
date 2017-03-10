@@ -1,0 +1,27 @@
+
+/* Pagination
+****************************************************/
+
+.navigation{
+	margin-top: 42px;
+	margin-top: 3rem;
+	margin-bottom: 70px;
+	margin-bottom: 5rem;
+	li {
+		display: inline;
+	}
+	li a, li a:hover, li.active a, li.disabled {
+		color: $darkgrey;
+		text-decoration:none;
+		background-color: #FFF;
+		border-radius: 10px;
+		cursor: pointer;
+		padding: 12px;
+		padding: 0.75rem;
+		box-shadow: 1px 1px 1px #B6B6B6;
+	}
+	li a:hover, li.active a {
+		background-color: $darkgrey ;
+		color: #FFF;
+	}
+}

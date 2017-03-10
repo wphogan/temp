@@ -1,0 +1,22 @@
+/*
+	= Variables and mixins	
+*******************************************************************************************/
+
+$font-stack:'Helvetica Neue',Helvetica, Arial, sans-serif;
+$primary-color: #333;
+$darkgrey: #333;
+$lightgrey: #E5E5E5;
+$bold: normal normal bold;
+$regular: normal normal normal;
+$bold-italic: italic normal bold;
+
+@mixin inverse() {
+	color: white;
+	background-color: $darkgrey;
+}
+/* Use this mixin when using webfonts that appear darker than in mockups (especially complex fonts) */
+/* This is also useful when using light text against a dark background; this will make the text crisper and less fuzzy */
+@mixin font-smoothing() {
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

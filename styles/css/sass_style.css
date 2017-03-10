@@ -1,0 +1,563 @@
+/*
+
+SASS_STYLE.SCSS CONTENTS
+
+This file is set up for mobile-first coding. See below for file structure:
+
+- Variables and mixins
+- General
+    This is where global styles go, as well as styles that apply to content
+- Header
+- Main Menu
+- Footer
+- Interior Pages
+	- Sidebar
+	- Pagination
+- Home
+- Media Queries
+	- Tablet Portrait (768px); corresponds with Bootstrap 'sm'
+	- Tablet Landscape (992px); corresponds with Bootstrap 'md'
+	- Desktop (1200px); corresponds with Bootstrap 'lg'
+
+*/
+/*
+	= Variables and mixins	
+*******************************************************************************************/
+/* Use this mixin when using webfonts that appear darker than in mockups (especially complex fonts) */
+/* This is also useful when using light text against a dark background; this will make the text crisper and less fuzzy */
+/*
+	= General	
+*******************************************************************************************/
+/* line 52, ../sass/sass_style.scss */
+html {
+  overflow-x: hidden;
+}
+
+/* line 53, ../sass/sass_style.scss */
+body {
+  overflow: hidden;
+}
+
+/* line 54, ../sass/sass_style.scss */
+.container {
+  width: 100%;
+  max-width: 1168px;
+}
+
+/* line 58, ../sass/sass_style.scss */
+body {
+  font: normal normal normal 15px/130% "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  padding-bottom: 0;
+  background-color: #EEEEEE;
+}
+
+/* line 64, ../sass/sass_style.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 68, ../sass/sass_style.scss */
+.wp-caption {
+  background-color: #fdfdfd;
+  border: 1px solid #CDC1CF;
+  padding: 5px;
+  -webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.2);
+}
+/* line 75, ../sass/sass_style.scss */
+.wp-caption img {
+  width: 100%;
+  height: auto;
+}
+/* line 79, ../sass/sass_style.scss */
+.wp-caption .wp-caption-text {
+  margin-bottom: 0;
+  font-size: 12px;
+  font-style: italic;
+  color: #111;
+}
+
+/* line 86, ../sass/sass_style.scss */
+.alignleft {
+  float: left;
+  margin-right: 15px;
+}
+
+/* line 90, ../sass/sass_style.scss */
+.aligncenter {
+  margin: 15px auto;
+  display: block;
+}
+
+/* line 94, ../sass/sass_style.scss */
+.alignright {
+  float: right;
+  margin-left: 15px;
+}
+
+/* line 98, ../sass/sass_style.scss */
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* line 102, ../sass/sass_style.scss */
+a {
+  color: #333;
+}
+
+/* line 105, ../sass/sass_style.scss */
+em {
+  font-style: italic;
+}
+
+/* line 108, ../sass/sass_style.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 111, ../sass/sass_style.scss */
+p {
+  margin-bottom: 15px;
+}
+
+/* line 114, ../sass/sass_style.scss */
+blockquote, blockquote * {
+  color: #333;
+  font: italic normal bold 18px/130% "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 15px 0;
+}
+
+/* line 119, ../sass/sass_style.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+  margin: 30px 0 15px;
+}
+
+/* line 123, ../sass/sass_style.scss */
+h2 {
+  font-size: 30px;
+}
+
+/* line 124, ../sass/sass_style.scss */
+h3 {
+  font-size: 24px;
+}
+
+/* line 125, ../sass/sass_style.scss */
+h4 {
+  font-size: 20px;
+}
+
+/* line 126, ../sass/sass_style.scss */
+h5 {
+  font-size: 16px;
+}
+
+/* line 127, ../sass/sass_style.scss */
+h6 {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* line 129, ../sass/sass_style.scss */
+> h2 {
+  font-size: 40px;
+}
+
+/* line 130, ../sass/sass_style.scss */
+ul {
+  padding-left: 30px;
+  list-style-type: square;
+  margin-bottom: 15px;
+}
+/* line 134, ../sass/sass_style.scss */
+ul ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  margin-bottom: 0;
+}
+/* line 138, ../sass/sass_style.scss */
+ul ul ul {
+  list-style-type: circle;
+}
+
+/* line 143, ../sass/sass_style.scss */
+ol {
+  padding-left: 30px;
+  list-style-type: decimal;
+  margin-bottom: 15px;
+}
+/* line 147, ../sass/sass_style.scss */
+ol ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  margin-bottom: 0;
+}
+/* line 151, ../sass/sass_style.scss */
+ol ul ul {
+  list-style-type: circle;
+}
+/* line 155, ../sass/sass_style.scss */
+ol ol {
+  padding-left: 20px;
+}
+
+/*
+	= Header	
+*******************************************************************************************/
+/* line 163, ../sass/sass_style.scss */
+.navbar-wrapper {
+  position: static;
+}
+
+/* line 166, ../sass/sass_style.scss */
+.navbar-wrapper .container {
+  padding: 0;
+}
+
+/* line 169, ../sass/sass_style.scss */
+.navbar {
+  border: none;
+}
+
+/* line 173, ../sass/sass_style.scss */
+.left {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 178, ../sass/sass_style.scss */
+.brand {
+  margin-bottom: 20px;
+}
+
+/* line 181, ../sass/sass_style.scss */
+#search-2 {
+  float: right;
+}
+
+/*
+	= Main Menu	
+*******************************************************************************************/
+/* line 190, ../sass/sass_style.scss */
+.menu-collapser {
+  display: none !important;
+}
+
+/* line 193, ../sass/sass_style.scss */
+.navbar-toggle {
+  background-color: #333;
+}
+/* line 195, ../sass/sass_style.scss */
+.navbar-toggle .icon-bar {
+  background-color: #E5E5E5;
+}
+
+/* line 199, ../sass/sass_style.scss */
+ul.slimmenu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block !important;
+  background-color: #666;
+}
+/* line 206, ../sass/sass_style.scss */
+ul.slimmenu li {
+  position: relative;
+  display: inline-block;
+  background-color: #AAA;
+}
+/* line 210, ../sass/sass_style.scss */
+ul.slimmenu li a {
+  display: block;
+  color: #333;
+  padding: 12px 64px 12px 16px;
+  font-size: 16px;
+  font-weight: 400;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -webkit-transition: background-color 0.5s ease-out;
+}
+/* line 221, ../sass/sass_style.scss */
+ul.slimmenu li a:hover {
+  background-color: #999;
+  text-decoration: none;
+}
+/* line 226, ../sass/sass_style.scss */
+ul.slimmenu li .sub-collapser {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.075);
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 48px;
+  height: 100%;
+  text-align: center;
+  z-index: 999;
+  cursor: pointer;
+}
+/* line 236, ../sass/sass_style.scss */
+ul.slimmenu li .sub-collapser:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+/* line 243, ../sass/sass_style.scss */
+ul.slimmenu li .sub-collapser > i {
+  color: #333;
+  font-size: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  font-style: normal;
+}
+/* line 251, ../sass/sass_style.scss */
+ul.slimmenu li > ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 999;
+  width: 100%;
+}
+/* line 258, ../sass/sass_style.scss */
+ul.slimmenu li > ul > li ul {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}
+/* line 268, ../sass/sass_style.scss */
+ul.slimmenu > li {
+  margin-right: -5px;
+  border-left: 1px solid #999;
+}
+/* line 271, ../sass/sass_style.scss */
+ul.slimmenu > li:first-child {
+  border-left: 0;
+}
+/* line 272, ../sass/sass_style.scss */
+ul.slimmenu > li:last-child {
+  margin-right: 0;
+}
+/* line 274, ../sass/sass_style.scss */
+ul.slimmenu ul {
+  margin: 0;
+  list-style-type: none;
+}
+/* line 277, ../sass/sass_style.scss */
+ul.slimmenu ul li {
+  background-color: #BBB;
+}
+/* line 281, ../sass/sass_style.scss */
+ul.slimmenu.collapsed li {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/* line 287, ../sass/sass_style.scss */
+ul.slimmenu.collapsed li a {
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/* line 294, ../sass/sass_style.scss */
+ul.slimmenu.collapsed li .sub-collapser {
+  height: 40px;
+}
+/* line 297, ../sass/sass_style.scss */
+ul.slimmenu.collapsed li > ul {
+  display: none;
+  position: static;
+}
+
+/* line 304, ../sass/sass_style.scss */
+.collapse-button {
+  display: none;
+}
+
+/* line 307, ../sass/sass_style.scss */
+.navbar-collapse {
+  max-height: 100%;
+}
+
+/*
+	= Footer 	
+*******************************************************************************************/
+/* line 315, ../sass/sass_style.scss */
+footer {
+  text-align: center;
+  border-top: 1px solid #E5E5E5;
+}
+
+/* line 319, ../sass/sass_style.scss */
+#menu-footer-menu {
+  margin: 20px auto;
+}
+/* line 321, ../sass/sass_style.scss */
+#menu-footer-menu li {
+  list-style: none;
+  display: inline;
+  margin-right: 10px;
+}
+
+/*
+	= Interior pages 	
+*******************************************************************************************/
+/* line 332, ../sass/sass_style.scss */
+.maincontent.lower {
+  padding-bottom: 50px;
+}
+
+/* line 335, ../sass/sass_style.scss */
+.container-normal .row.maincontent {
+  background-color: #FFF;
+}
+
+/* line 339, ../sass/sass_style.scss */
+#breadcrumbs {
+  list-style: none;
+  margin: 10px 0;
+  overflow: hidden;
+}
+/* line 343, ../sass/sass_style.scss */
+#breadcrumbs li {
+  float: left;
+  margin-right: 15px;
+}
+/* line 347, ../sass/sass_style.scss */
+#breadcrumbs .separator {
+  font-weight: 700;
+  font-size: 20px;
+  color: #999;
+}
+
+/* Sidebar
+****************************************************/
+/* line 358, ../sass/sass_style.scss */
+#secondary a {
+  color: #000;
+}
+/* line 361, ../sass/sass_style.scss */
+#secondary h3.widget-title {
+  margin-top: 0;
+}
+/* line 364, ../sass/sass_style.scss */
+#secondary aside {
+  background-color: #E5E5E5;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+/* line 368, ../sass/sass_style.scss */
+#secondary aside ul {
+  list-style: none;
+}
+/* line 372, ../sass/sass_style.scss */
+#secondary li {
+  list-style: none;
+}
+
+/* Pagination
+****************************************************/
+/* line 380, ../sass/sass_style.scss */
+.navigation {
+  margin-top: 42px;
+  margin-top: 3rem;
+  margin-bottom: 70px;
+  margin-bottom: 5rem;
+}
+/* line 385, ../sass/sass_style.scss */
+.navigation li {
+  display: inline;
+}
+/* line 388, ../sass/sass_style.scss */
+.navigation li a, .navigation li a:hover, .navigation li.active a, .navigation li.disabled {
+  color: #333;
+  text-decoration: none;
+  background-color: #FFF;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 12px;
+  padding: 0.75rem;
+  box-shadow: 1px 1px 1px #B6B6B6;
+}
+/* line 398, ../sass/sass_style.scss */
+.navigation li a:hover, .navigation li.active a {
+  background-color: #333;
+  color: #FFF;
+}
+
+/*
+	= Home 	
+*******************************************************************************************/
+/* line 409, ../sass/sass_style.scss */
+.mainpage .maincontent {
+  background-color: #FFF;
+}
+
+/* line 412, ../sass/sass_style.scss */
+a.learnmore {
+  color: #FFF;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/*
+	= Media Queries	
+*******************************************************************************************/
+@media (min-width: 768px) {
+  /* Tablet Portrait */
+  /* line 425, ../sass/sass_style.scss */
+  ul.slimmenu {
+    display: inline-block;
+    text-align: center;
+  }
+  /* line 429, ../sass/sass_style.scss */
+  ul.slimmenu li a {
+    padding: 12px 16px;
+  }
+  /* line 432, ../sass/sass_style.scss */
+  ul.slimmenu li > ul {
+    left: -20px;
+    text-align: left;
+  }
+  /* line 435, ../sass/sass_style.scss */
+  ul.slimmenu li > ul > li ul {
+    left: 82%;
+  }
+  /* line 439, ../sass/sass_style.scss */
+  ul.slimmenu li ul.sub-menu {
+    width: 260px;
+  }
+  /* line 441, ../sass/sass_style.scss */
+  ul.slimmenu li ul.sub-menu li a {
+    width: 220px;
+  }
+  /* line 445, ../sass/sass_style.scss */
+  ul.slimmenu li .sub-collapser {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  /* Tablet Landscape */
+}
+@media (min-width: 1200px) {
+  /* Desktop */
+}
