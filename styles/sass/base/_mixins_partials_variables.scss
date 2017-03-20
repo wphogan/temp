@@ -20,3 +20,26 @@ $bold-italic: italic normal bold;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+
+//breakpoints
+$mobile: 320px;
+$tablet-width: 768px;
+$tablet-landscape-width: 992px;
+$desktop-width: 1200px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+@mixin tablet-landscape {
+  @media (min-width: #{$tablet-landscape-width}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

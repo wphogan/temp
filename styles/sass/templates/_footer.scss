@@ -14,3 +14,20 @@ footer {
 		margin-right: 10px;
 	}
 }
+
+
+
+/* Tablet ***************************************************************/
+@include tablet {
+  
+} //end tablet
+
+/* Tablet-landscape ******************************************************/
+@include tablet-landscape {
+  
+} //end tablet-landscape
+
+/* Desktop ******************************************************/
+@include desktop {
+  
+} //end desktop

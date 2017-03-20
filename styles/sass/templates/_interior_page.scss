@@ -23,3 +23,19 @@
 		color:#999;
 	}
 }
+
+
+/* Tablet ***************************************************************/
+@include tablet {
+  
+} //end tablet
+
+/* Tablet-landscape ******************************************************/
+@include tablet-landscape {
+  
+} //end tablet-landscape
+
+/* Desktop ******************************************************/
+@include desktop {
+  
+} //end desktop

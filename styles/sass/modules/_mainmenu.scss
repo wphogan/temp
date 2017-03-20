@@ -122,11 +122,10 @@ ul.slimmenu {
 .navbar-collapse{
 	max-height: 100%;
 }
-/*
-	= Media Queries	
-*******************************************************************************************/
-@media (min-width: 768px){ /* Tablet Portrait */
-	ul.slimmenu {
+
+/* Tablet ***************************************************************/
+@include tablet {
+  	ul.slimmenu {
 		display:inline-block;
 		text-align:center;
 		li {
@@ -151,4 +150,14 @@ ul.slimmenu {
 			}
 		}
 	}
-}
+} //end tablet
+
+/* Tablet-landscape ******************************************************/
+@include tablet-landscape {
+  
+} //end tablet-landscape
+
+/* Desktop ******************************************************/
+@include desktop {
+  
+} //end desktop

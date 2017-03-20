@@ -13,3 +13,20 @@ a.learnmore{
 	width: 100%;
 	margin-top:20px;
 }
+
+
+
+/* Tablet ***************************************************************/
+@include tablet {
+  
+} //end tablet
+
+/* Tablet-landscape ******************************************************/
+@include tablet-landscape {
+  
+} //end tablet-landscape
+
+/* Desktop ******************************************************/
+@include desktop {
+  
+} //end desktop
